@@ -3,6 +3,7 @@ package com.example.composebasics
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -42,7 +43,12 @@ private fun App() {
 @Composable
 fun Greeting(name: String) {
     Surface(color = MaterialTheme.colors.primary) {
-        Text(text = "Hello $name!", modifier = Modifier.padding(25.dp))
+        Column(modifier = Modifier.padding(24.dp)) {
+            Text(text = "Alex")
+            Text(text = name)
+
+        }
+        //Text(text = "Hello $name!", modifier = Modifier.padding(25.dp))
     }
 }
 
